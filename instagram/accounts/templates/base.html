@@ -1,0 +1,20 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        {% block styles %}
+    {% bootstrap_css %}
+  {% endblock %}
+        <link rel="stylesheet" href="{% static 'styles.css'%}">
+    </head>
+    <body>
+        <h1>TheGram</h1>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
