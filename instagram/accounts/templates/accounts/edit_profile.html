@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% load bootstrap3%}
+{% load static%}
+    
+{%block content%}
+    
+    <div>
+        <form method="post">
+            {%csrf_token%}
+            {{form.as_ul}}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock%}
