@@ -7,6 +7,10 @@ body{
         
 }
 
+body *{
+    font-family: Ubuntu;
+}
+
 h1, h2, h3, h4, h5, p{
     font-weight: normal;
     margin: 0;
@@ -17,4 +21,19 @@ a, a:hover, a:visited{
     color: #fff;
     text-decoration: none;
     color: #fff;
+}
+
+.heading{
+    margin-top: 200px;
+    margin-left: 30.5%;
+    margin-right: 60.5%;
+    /* border: 20px solid orange; */
+    padding: 1%;
+    font-size: 70px;
+    color: #fff;
+}
+
+.hood-detail{
+    background-color: rgba(241, 146,39, 0.1)
+
 }

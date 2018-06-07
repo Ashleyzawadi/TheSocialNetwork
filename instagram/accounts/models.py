@@ -6,7 +6,9 @@ from django.contrib.auth.models import User
 # Create your models here.
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
+    name = models.CharField(max_length = 100, default = 'My Name')
     bio = models.CharField(max_length = 100, default = 'A little about me!')
+    profpic = models.ImageField(upload_to='profile_images',default = 'logo.png')
     website = models.URLField()
 
     def create_profile(sender, **kwargs):
@@ -16,4 +18,4 @@ class UserProfile(models.Model):
     post_save.connect(create_profile, sender=User)
 
     def __str__(self):
-        return self.user
+        return self.name

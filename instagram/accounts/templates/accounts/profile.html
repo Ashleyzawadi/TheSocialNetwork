@@ -10,8 +10,13 @@
             <h1> {{user.first_name}} </h1>
             <h1> {{user.last_name}} </h1>
             <h1> {{user.email}} </h1>
-                                       
+            <h1> {{user.userprofile.bio}} </h1>
+            <img src="{{user.userprofile.image.url}}" alt="{{user.first_name}}">
+            
 
+            <!-- edit profile -->
+                                       
+            <button><a href="{% url 'accounts:edit_profile' %}">Edit Profile</a></button>
             
        
 {% endblock%}
