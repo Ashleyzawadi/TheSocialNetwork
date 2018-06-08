@@ -10,8 +10,8 @@ from django.contrib.auth import update_session_auth_hash
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #authentication
-def index(request):
-    return render(request,'accounts: index')
+# def index(request):
+#     return render(request,'accounts: index')
 
 def login_view(request):
     return render(request, 'accounts/login.html')
@@ -21,10 +21,10 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('accounts:index')
+        return redirect(reverse('accounts:createprofile'))
     else: 
         form = RegistrationForm()
-        return render(request, 'accounts/registration.html', {'form':form })
+        return render(request, 'accounts/registration.html', {'form':form }, args)
 
 def login_redirect(request):
    return render(request, 'index.html')

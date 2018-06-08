@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light justify-content-between">
       {%if user.is_authenticated %}
-  
+        <a class="navbar-brand" href="{% url 'insta:index' %}">Home</a>
         <a class="navbar-brand" href="{% url 'accounts:view_profile' %}">Profile</a>
         <a class="navbar-brand" href="{% url 'accounts:edit_profile' %}">Edit Profile</a>
         <a class="navbar-brand" href="{% url 'accounts:change_password' %}">Change Password</a>
